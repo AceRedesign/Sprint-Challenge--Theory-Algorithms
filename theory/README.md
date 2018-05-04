@@ -7,31 +7,37 @@ both `antelope` and `antelopes`.)
 
 * Single regex that matches either of these:
 
-    antelope rocks out
-    
-    antelopes rock out
+  antelope rocks out
+
+  antelopes rock out
+
+  #### /antelopes? rocks? out/g
 
 * Regex that matches either of:
 
-    goat
-    
-    moat
+  goat
+
+  moat
 
   but not:
 
-    boat
+  boat
+
+  #### /[gm]oat/g
 
 * Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
   month and day can each be 1-2 digits). This does not need to verify the date
   is correct (e.g 3333-33-33 can match).
 
   2000-10-12
-  
+
   1999-1-20
-  
+
   1999-01-20
-  
+
   812-2-10
+
+  #### /[0-9]{1,4}-[0-9]{1,2}-[0-9]{1,2}
 
 ## State Machines
 
@@ -43,7 +49,7 @@ both `antelope` and `antelopes`.)
       ab*c+d?[ef]
 
   Remember the ε transition can be used to move between states without
-  consuming input. 
+  consuming input.
 
 * A lion can be sleeping, eating, hunting, or preening. Draw a state
   machine diagram for the lion and label the transition events that
